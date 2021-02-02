@@ -1,0 +1,7 @@
+Gold Label : line
+Binary prediction Alex : line
+Ternary Prediction Alex : line
+Binary prediction VGG19 : scatter
+Ternary Prediction VGG19 : scatter
+Binary prediction Ensemble : scatter
+Ternary Prediction Ensemble : scatter
