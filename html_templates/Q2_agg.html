@@ -1,0 +1,50 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script>
+$(document).ready(function() {
+  // process a click on an option button
+  $('.option').on('click', function(event) {
+    // copy answer to hidden input
+    $('input[name="answer"]').val($(this).html());
+    // erase any selected button
+    $('.option').removeClass('btn-info');
+    // highlight the current button
+    $(this).addClass('btn-info');
+    // don't submit the form
+    event.preventDefault();
+  });
+});
+
+</script>
+
+<div class="container mt-2">
+  <h4>Given these statistics, select the plot of the underlying data.</h4>
+  <div class="row">
+    <div class="col-8">
+      1<img src="${image_url1}" class="img-fluid" width=35% height=30% alt="Responsive image">
+      2<img src="${image_url2}" class="img-fluid" width=35% height=30% alt="Responsive image">
+<br>3
+      <img src="${image_url3}" class="img-fluid" width=35% height=40% alt="Responsive image">
+      4<img src="${image_url4}" class="img-fluid" width=35% height=40% alt="Responsive image">
+
+
+    </div>
+    <div class="col-4">
+      <img src="${table_image_url_aggregate}" class="img-fluid" width=100% height=100% alt="Responsive image">
+      <h5>Select an option</h5>
+      <div class="form-group">
+        <div class="btn-group-vertical">
+          <button class="btn btn-secondary option">Top left (1)</button>
+          <button class="btn btn-secondary option">Top Right (2)</button>
+          <button class="btn btn-secondary option">Bottom Left (3)</button>
+          <button class="btn btn-secondary option">Bottom Right (4)</button>
+        </div>
+      </div>
+      <input type="hidden" name="answer">
+<br>
+      <div class="form-group">
+        <input type="submit" class="btn  btn-primary" value="Submit">
+      </div>
+    </div>
+  </div>
+</div>  
